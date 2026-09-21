@@ -77,9 +77,3 @@ A base foi entregue **intencionalmente suja**, exigindo tratamento robusto em v�
 - **Duplicidade de registros**: tanto por chave (`id_filme`) quanto por variações cosméticas de título (capitalização/espaçamento)
 - **Tratamento de nulos**: uso de `try_cast`/`coalesce` para evitar que operações e concatenações falhem silenciosamente diante de dados ausentes
 - **Limitação conhecida**: a base combina TMDB/IMDb sem uma chave de deduplicação de entidade totalmente confiável — alguns filmes aparecem com múltiplas variações de título e `id` distintos (ex.: traduções regionais), o que pode inflar levemente contagens agregadas. Uma melhoria futura seria usar identificadores nativos (ex. `tconst` do IMDb) como chave de correspondência entre as fontes.
-
----
-
-## 👤 Autor
-
-Irvin — Engenharia de Dados, Rocket Lab 2026.2
